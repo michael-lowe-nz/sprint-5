@@ -26,17 +26,15 @@ for (var i = 1; i <= 100; i++){
 
 //Exercise 3
 //ChessBoard
-var board = "# # # # # # # #\n# # # # # # # #\n# # # # # # # #\n# # # # # # # #\n# # # # # # # #\n# # # # # # # #\n# # # # # # # #\n# # # # # # # #\n";
-console.log("Board1"+board);
-
-var output = ""
-var size = 8;
-for (var i = 0; i < size; i++){
-  for (var j = 0; i < size; i++){
+var output = "" //make empty string for output
+var size = 4; // define size of the grid
+for (var i = 0; i < size; i++){ // first loop does 8 rows
+  for (var j = 0; j < size; j++){ // second loop does 8 columns
     output += "#"
-    if(j !== size-1){
+    if(j !== size-1){ // if its not the last one in the row add a space
       output +=" ";
     }
+    else output +="\n" // otherwise put a new line in
   }
-  output+"\n";
 }
+console.log("output ("+size+"): \n"+output);
